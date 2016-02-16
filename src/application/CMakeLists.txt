@@ -1,0 +1,5 @@
+add_executable(gx main.cpp)
+message(STATUS Libraries )
+target_link_libraries(gx lua Core Renderer glfw ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES} ${OPENCL_LIBRARIES} assimp ${CGAL_LIBRARIES} ${BOOST_THREAD_LIBRARIES} ${GMP_LIBRARIES} ${FIELD3D_LIBRARIES})
+include_directories(${OPENCL_INCLUDE_DIRS})
+install(TARGETS gx DESTINATION ${PROJECT_SOURCE_DIR}/..)
